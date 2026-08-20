@@ -1,0 +1,9 @@
+FRESH CONVERSATION TEST
+========================================
+Query: What about that order?
+Intent: policy
+Answer: I could not find a sufficiently relevant policy in the knowledge base to answer this question.
+Source: policy_kb
+Confidence: 0.0
+Initial history: []
+Final history: [{'query': 'What about that order?', 'intent': 'policy', 'answer': 'I could not find a sufficiently relevant policy in the knowledge base to answer this question.'}]

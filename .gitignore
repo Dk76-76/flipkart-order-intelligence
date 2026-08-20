@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+
+.env
+.env.*
+!.env.example
+
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# Python / cache
+.pytest_cache/
+.mypy_cache/
+
+# Large local datasets
+data/FashionMNIST/
+part2_product_classifier/data/FashionMNIST/
+
+# Generated feature cache
+part2_product_classifier/data/features/
+
+# Local uploads
+data/uploads/
+
+# Generated outputs
+outputs/
+part2_product_classifier/outputs/
+

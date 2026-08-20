@@ -1,0 +1,7 @@
+POLICY RAG TEST 1
+========================================
+Query: What is the return window for apparel products?
+Intent: policy
+Answer: Apparel products can be returned within 7 days of delivery.
+Source: policy_kb
+Confidence: 0.6955

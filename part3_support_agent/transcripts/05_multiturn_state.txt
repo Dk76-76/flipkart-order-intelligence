@@ -1,0 +1,15 @@
+MULTI-TURN CONVERSATION TEST
+========================================
+TURN 1
+----------------------------------------
+Query: What is the return risk for this order?
+Intent: return_risk
+Answer: Return probability is 0.4489. Risk level is Medium.
+History: [{'query': 'What is the return risk for this order?', 'intent': 'return_risk', 'answer': 'Return probability is 0.4489. Risk level is Medium.'}]
+
+TURN 2
+----------------------------------------
+Query: What about that order?
+Intent: return_risk
+Answer: Return probability is 0.4489. Risk level is Medium.
+History: [{'query': 'What is the return risk for this order?', 'intent': 'return_risk', 'answer': 'Return probability is 0.4489. Risk level is Medium.'}, {'query': 'What about that order?', 'intent': 'return_risk', 'answer': 'Return probability is 0.4489. Risk level is Medium.'}]

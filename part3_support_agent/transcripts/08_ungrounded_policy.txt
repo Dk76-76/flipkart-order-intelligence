@@ -1,0 +1,10 @@
+UNGROUNDED POLICY TEST
+========================================
+Query: What is the policy for international drone deliveries?
+Intent: policy
+Retrieved similarity: 0.4028
+Grounding threshold: 0.5
+Answer: I could not find a sufficiently relevant policy in the knowledge base to answer this question.
+Source: policy_kb
+Confidence: 0.0
+Decision: REFUSED

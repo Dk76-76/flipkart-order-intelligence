@@ -1,0 +1,8 @@
+IMAGE CLASSIFICATION TEST
+========================================
+Query: What product category is this image?
+Image: data/sample_images/01_pullover.png
+Intent: image_classification
+Answer: The product is classified as Pullover with 0.9757 confidence.
+Source: image_classifier_tool
+Confidence: 0.9757

@@ -1,0 +1,7 @@
+RETURN RISK TEST
+========================================
+Query: What is the return risk for this order?
+Intent: return_risk
+Answer: Return probability is 0.6211. Risk level is High.
+Source: return_risk_tool
+Confidence: 1.0

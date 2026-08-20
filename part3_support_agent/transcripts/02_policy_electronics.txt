@@ -1,0 +1,7 @@
+POLICY RAG TEST 2
+========================================
+Query: What is the return window for electronics products?
+Intent: policy
+Answer: Eligible electronics products can be returned within 7 days of delivery.
+Source: policy_kb
+Confidence: 0.6104

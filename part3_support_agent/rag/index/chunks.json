@@ -1,0 +1,146 @@
+[
+  {
+    "chunk_id": "apparel_returns_chunk_1",
+    "document_id": "apparel_returns",
+    "title": "Apparel Return Policy",
+    "text": "Apparel products can be returned within 7 days of delivery."
+  },
+  {
+    "chunk_id": "apparel_returns_chunk_2",
+    "document_id": "apparel_returns",
+    "title": "Apparel Return Policy",
+    "text": "The product should be unused and have its original tags attached."
+  },
+  {
+    "chunk_id": "footwear_returns_chunk_1",
+    "document_id": "footwear_returns",
+    "title": "Footwear Return Policy",
+    "text": "Footwear products can be returned within 7 days of delivery."
+  },
+  {
+    "chunk_id": "footwear_returns_chunk_2",
+    "document_id": "footwear_returns",
+    "title": "Footwear Return Policy",
+    "text": "The footwear should be unused and returned with its original packaging."
+  },
+  {
+    "chunk_id": "electronics_returns_chunk_1",
+    "document_id": "electronics_returns",
+    "title": "Electronics Return Policy",
+    "text": "Eligible electronics products can be returned within 7 days of delivery."
+  },
+  {
+    "chunk_id": "electronics_returns_chunk_2",
+    "document_id": "electronics_returns",
+    "title": "Electronics Return Policy",
+    "text": "Some products may require troubleshooting or verification before a return is approved."
+  },
+  {
+    "chunk_id": "home_returns_chunk_1",
+    "document_id": "home_returns",
+    "title": "Home Product Return Policy",
+    "text": "Eligible home products can generally be returned within 7 days of delivery."
+  },
+  {
+    "chunk_id": "home_returns_chunk_2",
+    "document_id": "home_returns",
+    "title": "Home Product Return Policy",
+    "text": "The product should be unused and available for inspection during the return process."
+  },
+  {
+    "chunk_id": "cod_refunds_chunk_1",
+    "document_id": "cod_refunds",
+    "title": "COD Refund Policy",
+    "text": "For a returned COD order, the refund is processed after the returned product passes the required verification."
+  },
+  {
+    "chunk_id": "cod_refunds_chunk_2",
+    "document_id": "cod_refunds",
+    "title": "COD Refund Policy",
+    "text": "The refund is sent to the customer's selected eligible refund method."
+  },
+  {
+    "chunk_id": "delivery_sla_chunk_1",
+    "document_id": "delivery_sla",
+    "title": "Delivery SLA Policy",
+    "text": "The estimated delivery date shown for an order is based on the destination and available delivery service."
+  },
+  {
+    "chunk_id": "delivery_sla_chunk_2",
+    "document_id": "delivery_sla",
+    "title": "Delivery SLA Policy",
+    "text": "Delivery can take longer when there are operational or logistics delays."
+  },
+  {
+    "chunk_id": "reverse_pickup_chunk_1",
+    "document_id": "reverse_pickup",
+    "title": "Reverse Pickup Eligibility",
+    "text": "Reverse pickup is available when the product and order are eligible for return and the service is available at the delivery location."
+  },
+  {
+    "chunk_id": "reverse_pickup_chunk_2",
+    "document_id": "reverse_pickup",
+    "title": "Reverse Pickup Eligibility",
+    "text": "The product must be packed according to the return instructions before pickup."
+  },
+  {
+    "chunk_id": "damaged_product_chunk_1",
+    "document_id": "damaged_product",
+    "title": "Damaged Product Policy",
+    "text": "Customers should report a product that arrives damaged as soon as possible through the support process."
+  },
+  {
+    "chunk_id": "damaged_product_chunk_2",
+    "document_id": "damaged_product",
+    "title": "Damaged Product Policy",
+    "text": "The product may be inspected before a replacement, return, or refund is approved."
+  },
+  {
+    "chunk_id": "wrong_product_chunk_1",
+    "document_id": "wrong_product",
+    "title": "Wrong Product Policy",
+    "text": "If a customer receives a product different from the ordered item, the issue should be reported through the support process."
+  },
+  {
+    "chunk_id": "wrong_product_chunk_2",
+    "document_id": "wrong_product",
+    "title": "Wrong Product Policy",
+    "text": "The order and product may be verified before the return or replacement is processed."
+  },
+  {
+    "chunk_id": "exchange_policy_chunk_1",
+    "document_id": "exchange_policy",
+    "title": "Exchange Policy",
+    "text": "Exchange is available only for products and orders that are eligible for exchange."
+  },
+  {
+    "chunk_id": "exchange_policy_chunk_2",
+    "document_id": "exchange_policy",
+    "title": "Exchange Policy",
+    "text": "Availability can depend on the product, size or variant, and stock at the time of the request."
+  },
+  {
+    "chunk_id": "prepaid_refunds_chunk_1",
+    "document_id": "prepaid_refunds",
+    "title": "Prepaid Refund Policy",
+    "text": "For an eligible prepaid order, the refund is initiated after the return is approved and the required verification is completed."
+  },
+  {
+    "chunk_id": "prepaid_refunds_chunk_2",
+    "document_id": "prepaid_refunds",
+    "title": "Prepaid Refund Policy",
+    "text": "The refund is processed back through the applicable payment or refund method."
+  },
+  {
+    "chunk_id": "order_cancellation_chunk_1",
+    "document_id": "order_cancellation",
+    "title": "Order Cancellation Policy",
+    "text": "An order can be cancelled when the cancellation option is available for that order."
+  },
+  {
+    "chunk_id": "order_cancellation_chunk_2",
+    "document_id": "order_cancellation",
+    "title": "Order Cancellation Policy",
+    "text": "Cancellation availability can change after the order moves further into the fulfilment process."
+  }
+]

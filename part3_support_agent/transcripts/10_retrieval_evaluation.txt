@@ -1,0 +1,86 @@
+RETRIEVAL EVALUATION
+============================================================
+
+QUERY 1
+------------------------------------------------------------
+Query: What is the return window for apparel products?
+Relevant documents: ['apparel_returns']
+Top-3 retrieved documents: ['apparel_returns', 'footwear_returns', 'damaged_product']
+Relevant retrieved documents: ['apparel_returns']
+
+Precision@3 arithmetic:
+1 / 3 = 0.3333
+
+Recall@3 arithmetic:
+1 / 1 = 1.0000
+
+QUERY 2
+------------------------------------------------------------
+Query: How long can I return an electronic product?
+Relevant documents: ['electronics_returns']
+Top-3 retrieved documents: ['electronics_returns', 'home_returns', 'apparel_returns']
+Relevant retrieved documents: ['electronics_returns']
+
+Precision@3 arithmetic:
+1 / 3 = 0.3333
+
+Recall@3 arithmetic:
+1 / 1 = 1.0000
+
+QUERY 3
+------------------------------------------------------------
+Query: How does a COD refund work after a return?
+Relevant documents: ['cod_refunds']
+Top-3 retrieved documents: ['cod_refunds', 'prepaid_refunds']
+Relevant retrieved documents: ['cod_refunds']
+
+Precision@3 arithmetic:
+1 / 2 = 0.5000
+
+Recall@3 arithmetic:
+1 / 1 = 1.0000
+
+QUERY 4
+------------------------------------------------------------
+Query: When is reverse pickup available?
+Relevant documents: ['reverse_pickup']
+Top-3 retrieved documents: ['reverse_pickup', 'order_cancellation']
+Relevant retrieved documents: ['reverse_pickup']
+
+Precision@3 arithmetic:
+1 / 2 = 0.5000
+
+Recall@3 arithmetic:
+1 / 1 = 1.0000
+
+QUERY 5
+------------------------------------------------------------
+Query: What happens if I receive the wrong product?
+Relevant documents: ['wrong_product']
+Top-3 retrieved documents: ['wrong_product', 'damaged_product']
+Relevant retrieved documents: ['wrong_product']
+
+Precision@3 arithmetic:
+1 / 2 = 0.5000
+
+Recall@3 arithmetic:
+1 / 1 = 1.0000
+
+QUERY 6
+------------------------------------------------------------
+Query: What is the expected delivery time for an order?
+Relevant documents: ['delivery_sla']
+Top-3 retrieved documents: ['delivery_sla', 'electronics_returns']
+Relevant retrieved documents: ['delivery_sla']
+
+Precision@3 arithmetic:
+1 / 2 = 0.5000
+
+Recall@3 arithmetic:
+1 / 1 = 1.0000
+
+============================================================
+AVERAGE RESULTS
+============================================================
+Average Precision@3: 0.4444
+Average Recall@3: 1.0000
