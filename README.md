@@ -40,7 +40,19 @@ The Random Forest F1-maximising threshold (`t*_rf`) is **0.50**.
 
 The operational threshold selected during Random Forest threshold tuning is **0.42**, with approximately **26.01 percentage points** recall improvement compared with the default 0.50 threshold.
 
-Part 3 anchors its return-risk buckets to the Random Forest threshold used by the support workflow.
+The operational threshold is reported separately from the Part 3 risk-bucket threshold.
+
+### Part 3 Risk Buckets
+
+Part 3 anchors its risk buckets to the Random Forest F1-maximising threshold (`t*_rf = 0.50`).
+
+The support workflow uses the following bucket boundaries:
+
+- **Low:** probability < 0.50
+- **Medium:** 0.50 <= probability < 0.65
+- **High:** probability >= 0.65
+
+Therefore, the operational threshold of 0.42 is **not** used as the Part 3 risk-bucket cutoff.
 
 ---
 
@@ -79,8 +91,6 @@ The evaluation contains the full 10×10 confusion matrix, per-class precision/re
 | T-shirt/top → Shirt | 106 |
 | Pullover → Coat | 78 |
 | Pullover → Shirt | 67 |
-
-These are visually plausible errors because shirts, T-shirts/tops, pullovers, and coats have similar silhouettes and overlapping visual features.
 
 ### Example Prediction
 
@@ -144,13 +154,13 @@ Policy RAG       Return Risk Tool      Image Classifier Tool
     +-------------------+----------------------+
                         |
                         v
-              Grounding / Validation
+               Grounding / Validation
                         |
                         v
-              Response Generation
+               Response Generation
                         |
                         v
-              Structured Response
+               Structured Response
 ```
 
 ---
@@ -338,6 +348,8 @@ uv run python part1_return_risk/random_forest_threshold_tuning.py
 
 The Random Forest F1-maximising threshold (`t*_rf`) is **0.50**.
 
+The threshold analysis also identifies **0.42** as the operational threshold for recall improvement. This operational threshold is not used for Part 3 risk-bucket boundaries.
+
 ## 5. Part 1 — Save Final Model
 
 ```powershell
@@ -407,15 +419,18 @@ The repository also contains tests for groundedness, guardrails, mock LLM behavi
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```text
 flipkart-order-intelligence/
 |
 +-- data/
 |   +-- sample_images/
+|
 +-- models/
+|
 +-- outputs/
+|
 +-- part1_return_risk/
 |   +-- analysis/
 |   +-- train_baseline.py
@@ -426,6 +441,7 @@ flipkart-order-intelligence/
 |   +-- subgroup_analysis.py
 |   +-- explainability.py
 |   +-- save_final_model.py
+|
 +-- part2_product_classifier/
 |   +-- data/
 |   +-- outputs/
@@ -436,6 +452,7 @@ flipkart-order-intelligence/
 |   +-- evaluate.py
 |   +-- predict.py
 |   +-- export_samples.py
+|
 +-- part3_support_agent/
 |   +-- graph/
 |   +-- rag/
@@ -443,6 +460,7 @@ flipkart-order-intelligence/
 |   +-- guardrails/
 |   +-- tools/
 |   +-- transcripts/
+|
 +-- frontend/
 +-- main.py
 +-- pyproject.toml
@@ -459,6 +477,7 @@ Important transcripts include:
 
 ```text
 part3_support_agent/transcripts/
+
 +-- 01_policy_apparel.txt
 +-- 02_policy_electronics.txt
 +-- 03_return_risk.txt
@@ -474,11 +493,14 @@ These provide evidence for policy, prediction, classification, conversation, saf
 
 ---
 
-## Key Results
+# Key Results
 
 | Component | Result |
 |---|---:|
 | Random Forest F1-max threshold (`t*_rf`) | 0.50 |
+| Part 3 Low-risk cutoff | < 0.50 |
+| Part 3 Medium-risk range | 0.50 to < 0.65 |
+| Part 3 High-risk cutoff | >= 0.65 |
 | Operational threshold | 0.42 |
 | Return-risk recall improvement | 26.01 percentage points |
 | Part 2 test images | 10,000 |
@@ -494,7 +516,7 @@ These provide evidence for policy, prediction, classification, conversation, saf
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 - Python
 - Pandas
@@ -510,7 +532,7 @@ These provide evidence for policy, prediction, classification, conversation, saf
 
 ---
 
-## Project Highlights
+# Project Highlights
 
 - End-to-end machine learning workflow
 - Return-risk prediction
@@ -529,7 +551,7 @@ These provide evidence for policy, prediction, classification, conversation, saf
 
 ---
 
-## Conclusion
+# Conclusion
 
 Flipkart Order Intelligence combines multiple machine learning capabilities into a single support-oriented system.
 
