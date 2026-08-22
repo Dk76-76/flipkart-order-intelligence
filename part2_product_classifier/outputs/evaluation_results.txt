@@ -1,0 +1,33 @@
+Test images: 10000
+Test accuracy: 0.8898
+
+Confusion Matrix:
+[[820   3  14  47   5   0 106   0   4   1]
+ [  1 969   0  25   1   1   3   0   0   0]
+ [ 13   0 828  13  78   0  67   0   1   0]
+ [  6   6   9 918  21   0  39   0   1   0]
+ [  0   0  43  44 845   0  65   0   3   0]
+ [  0   0   0   0   0 955   1  27   2  15]
+ [107   0  36  54 112   1 685   0   4   1]
+ [  0   0   0   0   0  20   0 942   2  36]
+ [  4   0   0   3   1   2  12   0 977   1]
+ [  0   0   0   1   1  12   0  27   0 959]]
+
+Top confusion pairs:
+Shirt -> Coat: 112
+Shirt -> T-shirt/top: 107
+T-shirt/top -> Shirt: 106
+Pullover -> Coat: 78
+Pullover -> Shirt: 67
+
+Per-class precision and recall:
+T-shirt/top: Precision=0.8623, Recall=0.8200
+Trouser: Precision=0.9908, Recall=0.9690
+Pullover: Precision=0.8903, Recall=0.8280
+Dress: Precision=0.8308, Recall=0.9180
+Coat: Precision=0.7942, Recall=0.8450
+Sandal: Precision=0.9637, Recall=0.9550
+Shirt: Precision=0.7004, Recall=0.6850
+Sneaker: Precision=0.9458, Recall=0.9420
+Bag: Precision=0.9829, Recall=0.9770
+Ankle boot: Precision=0.9467, Recall=0.9590
