@@ -151,6 +151,36 @@ recall = recall_score(
 )
 
 
+confusion_pairs = []
+
+for true_class in range(NUM_CLASSES):
+    for predicted_class in range(NUM_CLASSES):
+
+        if true_class != predicted_class:
+
+            count = matrix[
+                true_class
+            ][
+                predicted_class
+            ]
+
+            if count > 0:
+                confusion_pairs.append(
+                    (
+                        count,
+                        CLASS_NAMES[true_class],
+                        CLASS_NAMES[predicted_class]
+                    )
+                )
+
+
+confusion_pairs.sort(
+    reverse=True
+)
+
+top_confusion_pairs = confusion_pairs[:5]
+
+
 os.makedirs(
     "models",
     exist_ok=True
@@ -199,6 +229,19 @@ with open(
     )
 
     file.write("\n\n")
+
+    file.write(
+        "Top confusion pairs:\n"
+    )
+
+    for count, true_class, predicted_class in top_confusion_pairs:
+
+        file.write(
+            f"{true_class} -> {predicted_class}: "
+            f"{count}\n"
+        )
+
+    file.write("\n")
 
     file.write(
         "Per-class precision and recall:\n"
