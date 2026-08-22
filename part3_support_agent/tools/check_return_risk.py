@@ -1,33 +1,48 @@
+from pathlib import Path
+
 import joblib
 import pandas as pd
 
 
-MODEL_PATH = "models/return_risk_model.pkl"
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+MODEL_PATH = PROJECT_ROOT / "models" / "return_risk_model.pkl"
 
-RISK_THRESHOLD = 0.42
-HIGH_RISK_THRESHOLD = 0.57
+RISK_THRESHOLD = 0.50
+HIGH_RISK_THRESHOLD = 0.65
+
+FEATURES = [
+    "product_category",
+    "price_inr",
+    "discount_pct",
+    "payment_method",
+    "customer_tenure_days",
+    "num_previous_orders",
+    "num_previous_returns",
+    "delivery_distance_km",
+    "delivery_days",
+    "is_weekend_order",
+    "rating_given",
+]
 
 
 def check_return_risk(order_features: dict) -> dict:
-    model = joblib.load(MODEL_PATH)
-
-    features = [
-        "product_category",
-        "price_inr",
-        "discount_pct",
-        "payment_method",
-        "customer_tenure_days",
-        "num_previous_orders",
-        "num_previous_returns",
-        "delivery_distance_km",
-        "delivery_days",
-        "is_weekend_order",
-        "rating_given",
+    missing_features = [
+        feature
+        for feature in FEATURES
+        if feature not in order_features
     ]
 
+    if missing_features:
+        raise ValueError(
+            "Missing required order features: "
+            + ", ".join(missing_features)
+        )
+
+    model = joblib.load(MODEL_PATH)
+
     input_data = pd.DataFrame(
-        [order_features],
-        columns=features
+        [[order_features[feature] for feature in FEATURES]],
+        columns=FEATURES,
     )
 
     return_probability = model.predict_proba(
@@ -44,7 +59,7 @@ def check_return_risk(order_features: dict) -> dict:
     return {
         "return_probability": round(
             float(return_probability),
-            4
+            4,
         ),
         "risk_bucket": risk_bucket,
     }
