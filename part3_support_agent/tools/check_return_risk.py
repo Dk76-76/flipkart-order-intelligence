@@ -7,8 +7,8 @@ import pandas as pd
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 MODEL_PATH = PROJECT_ROOT / "models" / "return_risk_model.pkl"
 
-RISK_THRESHOLD = 0.50
-HIGH_RISK_THRESHOLD = 0.65
+RISK_THRESHOLD = 0.42
+HIGH_RISK_THRESHOLD = 0.57
 
 FEATURES = [
     "product_category",
